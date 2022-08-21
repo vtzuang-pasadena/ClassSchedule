@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.thenav {
+  background-color: #001f3f;
+  color: white;
+  padding-top: 1em;
+}
+
+.thenav a {
+  padding-right: 1em;
+  color: white;
+  text-decoration: none;
+}
+
+.thenav a:hover {
+  color: #aaaaaa;
+}

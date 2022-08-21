@@ -1,23 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import { Outlet, Link } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <h1>College of the Northern California</h1>
+      <nav
+        className='thenav'
+        style={{ borderBottom: 'solid 1px', paddingBottom: '1rem' }}
+      >
+        <Link to='/create'>Create Class</Link>
+        <Link to='/search'>Search Classes</Link>
+        <Link to='/add'>Add Classes</Link>
+        <Link to='/view'>View your Schedule</Link>
+      </nav>
+      <Outlet />
     </div>
   );
 }
