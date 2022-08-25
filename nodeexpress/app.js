@@ -1,6 +1,23 @@
 let express = require('express');
 let app = express();
 let cors = require('cors');
+let mysql = require('mysql2');
+
+let con = mysql.createConnection({
+  host: 'localhost',
+  user: 'root',
+  password: 'dbpassword',
+  database: 'classschedule',
+});
+
+con.connect(function (err) {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  }
+
+  console.log('connected as id ' + con.threadId);
+});
 
 app.use(cors());
 
