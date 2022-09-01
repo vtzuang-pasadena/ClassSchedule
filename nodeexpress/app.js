@@ -80,3 +80,14 @@ app.post('/api/users', (req, res) => {
     geography: geo,
   });
 });
+
+app.get('/subject', (req, res) => {
+  con.query('SELECT * FROM subject', function (err, result, fields) {
+    if (err) {
+      throw err;
+    }
+
+    console.log(result);
+    res.send(result);
+  });
+});
