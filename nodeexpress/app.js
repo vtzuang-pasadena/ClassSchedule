@@ -91,3 +91,14 @@ app.get('/subject', (req, res) => {
     res.send(result);
   });
 });
+
+app.post('/checkCourseNumber', (req, res) => {
+  let subject = req.body.subject;
+  let courseNumber = req.body.courseNumber;
+
+  console.log(subject + ' ' + courseNumber);
+  res.send(subject + ' ' + courseNumber);
+
+  // con.query("SELECT * from ")
+  // work on query to database to check if courseNumber in use
+});
